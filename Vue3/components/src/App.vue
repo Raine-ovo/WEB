@@ -1,22 +1,23 @@
 <template>
-  <!-- <shuttersComp /> -->
-  <!-- <searchComp /> -->
-  <userComp />
+  <!-- <userComp /> -->
   <!-- <searchComp />
   <shuttersComp /> -->
+  <sideBarComp />
 </template>
 
 <script>
-import userComp from './components/user.vue';
+// import userComp from './components/user.vue';
 // import searchComp from './components/search.vue';
 // import shuttersComp from './components/shutters.vue';
+import sideBarComp from './components/sideBar.vue';
 
 export default {
   name: 'App',
   components: {
-    userComp,
+    // userComp,
     // searchComp,
     // shuttersComp,
+    sideBarComp,
   }
 }
 </script>
