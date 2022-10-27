@@ -7,7 +7,7 @@ import UserListView from '../views/UserListView'
 import UserProfileView from '../views/UserProfileView'
 
 const routes = [{
-        path: '',
+        path: '/',
         name: 'home',
         component: HomeView
     },
