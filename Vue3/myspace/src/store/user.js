@@ -12,6 +12,11 @@ const ModuleUser = {
         is_login: false,
     },
     getters: {},
+    // 可以在 mutation 中修改state，但 mutation 不支持异步
+    /* 
+        调用 mutation 函数：context.commit("func", {arg});
+        调用 action 函数：context.dispatch("func", {arg, 包括回调函数});
+    */
     mutations: {
         updateUser(state, user) {
             state.id = user.id;
@@ -35,9 +40,10 @@ const ModuleUser = {
             state.is_login = false;
         }
     },
-    // actions 不能直接更新state
+    // actions 不能直接更新 state
     actions: {
         login(context, data) {
+            // 通过jwt验证，先获取令牌
             $.ajax({
                 url: "https://app165.acapp.acwing.com.cn/api/token/",
                 type: "POST",
@@ -62,6 +68,7 @@ const ModuleUser = {
                         });
                     }, 4.5 * 60 * 1000);
 
+                    // 登录成功，通过API获得用户信息，
                     console.log(access_obj, refresh);
                     $.ajax({
                         url: "https://app165.acapp.acwing.com.cn/myspace/getinfo/",
