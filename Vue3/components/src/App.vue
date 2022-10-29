@@ -4,7 +4,8 @@
   <shuttersComp /> -->
   <!-- <sideBarComp /> -->
   <!-- <frostedGlassComp /> -->
-  <userCardComp />
+  <!-- <userCardComp /> -->
+  <loadComp />
 </template>
 
 <script>
@@ -13,7 +14,8 @@
 // import shuttersComp from './components/shutters.vue';
 // import sideBarComp from './components/sideBar.vue';
 // import frostedGlassComp from './components/frostedGlass.vue';
-import userCardComp from './components/userCard.vue';
+// import userCardComp from './components/userCard.vue';
+import loadComp from './components/load.vue';
 
 export default {
   name: 'App',
@@ -23,17 +25,11 @@ export default {
     // shuttersComp,
     // sideBarComp,
     // frostedGlassComp,
-    userCardComp,
+    // userCardComp,
+    loadComp,
   }
 }
 </script>
 
 <style>
-#app {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(200deg,#f3e7e9,#e3eeff);
-}
 </style>
